@@ -14,10 +14,10 @@ public class FasadaDAO implements IFasadaDAO {
 
 	@Autowired
 	IExecutorDAO executor2;
-
+	
 	public FasadaDAO() {
 		System.out.println(getClass().getSimpleName() + " CTOR()");
-		Thread.dumpStack();
+		//Thread.dumpStack();
 	}
 
 	@PostConstruct

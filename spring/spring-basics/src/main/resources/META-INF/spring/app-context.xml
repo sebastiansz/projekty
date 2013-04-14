@@ -7,9 +7,12 @@
 	<description>Example configuration to get you started.</description>
 
 	<!-- <context:component-scan base-package="org.test.spring" /> -->
+	<context:component-scan base-package="test" />
 
 	<bean id="executor1" class="org.test.spring.ExecutorDAO" scope="singleton" />
-
+<!-- 
+	<bean id="executor2" class="ExternalExecutorDAO" scope="singleton" />
+ -->
 	<bean id="fasada1" class="org.test.spring.FasadaDAO" scope="singleton">
 		<property name="executor" ref="executor1" />
 	</bean>

@@ -1,11 +1,11 @@
-package org.test.spring;
+package test;
 
 import org.springframework.stereotype.Component;
 
 @Component
-public class ExecutorDAO implements IExecutorDAO {
+public class ExternalExecutorDAO implements IExternalExecutorDAO {
 
-	public ExecutorDAO() {
+	public ExternalExecutorDAO() {
 		System.out.println(getClass().getSimpleName() + " CTOR()");
 
 	}

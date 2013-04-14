@@ -5,9 +5,11 @@ import junit.framework.TestCase;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import test.IExternalExecutorDAO;
+
 public class ExampleServiceTests extends TestCase {
 
-	public void testXml() throws Exception {
+	public void off_testXml() throws Exception {
 		org.springframework.context.ApplicationContext pAppContext = new ClassPathXmlApplicationContext(
 				"/META-INF/spring/app-context.xml");
 		IFasadaDAO pBean1 = (IFasadaDAO) pAppContext.getBean("fasada1");
@@ -24,7 +26,7 @@ public class ExampleServiceTests extends TestCase {
 		System.out.println(pBean1);
 	}
 
-	public void OFF_testMerge() throws Exception {
+	public void testMerge() throws Exception {
 		org.springframework.context.ConfigurableApplicationContext pAnnotations = new AnnotationConfigApplicationContext(
 				"org.test.spring");
 		org.springframework.context.ConfigurableApplicationContext pXML = new ClassPathXmlApplicationContext(
@@ -33,6 +35,7 @@ public class ExampleServiceTests extends TestCase {
 		pAnnotations.setParent(pXML);
 
 		IFasadaDAO pBean1 = (IFasadaDAO) pAnnotations.getBean(IFasadaDAO.class);
+		pAnnotations.getBean(IExternalExecutorDAO.class);
 		System.out.println(pBean1);
 	}
 
