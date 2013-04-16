@@ -1,6 +1,5 @@
 package com.processmonitor.web.controller;
 
-import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,9 +11,9 @@ public class DashboardController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String show(ModelMap modelMap) {
-
+		
 		System.err.println(">>>>>>>>>>>>>" + getClass().getSimpleName() + ".show()");
-
+		
 		return "dashboard";
 	}
 

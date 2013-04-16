@@ -10,7 +10,7 @@ import com.processmonitor.dao.IFasadaDAO;
 public class FasadaWrapperDAO implements IFasadaWrapperDAO {
 
 	@Autowired
-	@Qualifier("fasadaProsta")
+	@Qualifier("fasadaZdalna")
 	IFasadaDAO fasada;
 
 	public FasadaWrapperDAO() {

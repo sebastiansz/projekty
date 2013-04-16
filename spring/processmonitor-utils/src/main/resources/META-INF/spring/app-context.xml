@@ -5,11 +5,16 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 
-	<!-- <import resource="classpath*:META-INF/spring/app-context.xml"/> -->
+<!--     <import resource="classpath*:META-INF/spring/app-context.xml"/>
+ -->
 	<context:component-scan base-package="com.processmonitor.utils" />
 
-	<!-- <bean id="executor1" class="org.test.spring.ExecutorDAO" scope="singleton" 
-		/> <bean id="executor2" class="ExternalExecutorDAO" scope="singleton" /> 
-		<bean id="fasada1" class="org.test.spring.FasadaDAO" scope="singleton"> <property 
-		name="executor" ref="executor1" /> </bean> -->
+	<bean id="executor1" class="org.test.spring.ExecutorDAO" scope="singleton" />
+<!-- 
+	<bean id="executor2" class="ExternalExecutorDAO" scope="singleton" />
+ -->
+	<bean id="fasada1" class="org.test.spring.FasadaDAO" scope="singleton">
+		<property name="executor" ref="executor1" />
+	</bean>
+
 </beans>
