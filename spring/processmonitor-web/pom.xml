@@ -16,6 +16,15 @@
 
 	<dependencies>
 
+		<dependency>
+			<groupId>com.processmonitor</groupId>
+			<artifactId>processmonitor-dao</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.processmonitor</groupId>
+			<artifactId>processmonitor-utils</artifactId>
+		</dependency>
+
 		<!-- General dependencies -->
 		<dependency>
 			<groupId>log4j</groupId>

@@ -1,5 +1,5 @@
 
-package org.test.spring;
+package com.processmonitor.utils;
 
 
 public interface IFasadaWrapperDAO {

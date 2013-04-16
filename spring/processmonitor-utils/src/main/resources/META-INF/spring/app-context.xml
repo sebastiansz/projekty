@@ -4,21 +4,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-	<description>Example configuration to get you started.</description>
 
-	<!-- <context:component-scan base-package="org.test.spring" /> -->
-	<context:component-scan base-package="test" />
+	<!-- <import resource="classpath*:META-INF/spring/app-context.xml"/> -->
+	<context:component-scan base-package="com.processmonitor.utils" />
 
-
-    <import resource="classpath*:META-INF/spring/app-context.xml"/>
-
-
-	<bean id="executor1" class="org.test.spring.ExecutorDAO" scope="singleton" />
-<!-- 
-	<bean id="executor2" class="ExternalExecutorDAO" scope="singleton" />
- -->
-	<bean id="fasada1" class="org.test.spring.FasadaDAO" scope="singleton">
-		<property name="executor" ref="executor1" />
-	</bean>
-
+	<!-- <bean id="executor1" class="org.test.spring.ExecutorDAO" scope="singleton" 
+		/> <bean id="executor2" class="ExternalExecutorDAO" scope="singleton" /> 
+		<bean id="fasada1" class="org.test.spring.FasadaDAO" scope="singleton"> <property 
+		name="executor" ref="executor1" /> </bean> -->
 </beans>

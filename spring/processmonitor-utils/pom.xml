@@ -23,9 +23,20 @@
 			<groupId>com.processmonitor</groupId>
 			<artifactId>processmonitor-dao</artifactId>
 		</dependency>
+
 		<dependency>
-			<groupId>com.processmonitor</groupId>
-			<artifactId>processmonitor-jws</artifactId>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

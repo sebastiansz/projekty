@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Qualifier("fasadaProsta")
-public class FasadaDAO implements IFasadaDAO {
+@Qualifier("fasadaZdalna")
+public class FasadaZdalnaDAO implements IFasadaDAO {
 
 	@Autowired
 	IExecutorDAO executor;
@@ -17,7 +17,7 @@ public class FasadaDAO implements IFasadaDAO {
 	@Autowired
 	IExecutorDAO executor2;
 	
-	public FasadaDAO() {
+	public FasadaZdalnaDAO() {
 		System.out.println(getClass().getSimpleName() + " CTOR()");
 		//Thread.dumpStack();
 	}
