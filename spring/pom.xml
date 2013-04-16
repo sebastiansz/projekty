@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.prospinghibernate.gallery</groupId>
-	<artifactId>prospinghibernate_pom</artifactId>
+	<groupId>com.processmonitor</groupId>
+	<artifactId>processmonitor_pom</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>spring-persistence-web</name>
@@ -338,11 +338,14 @@
 		</dependency>
 	</dependencies>
 
+
+<!--
 	<modules>
 		<module>spring-dao</module>
 		<module>spring-jws</module>
 		<module>spring-persistence-web</module>
 	</modules>
+-->
 
 	<build>
 
