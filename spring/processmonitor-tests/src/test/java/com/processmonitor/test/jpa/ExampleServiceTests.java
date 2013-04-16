@@ -1,4 +1,4 @@
-package org.test.spring;
+package com.processmonitor.test.jpa;
 
 import junit.framework.TestCase;
 

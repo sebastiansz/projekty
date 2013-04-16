@@ -1,4 +1,4 @@
-package org.test.spring;
+package com.processmonitor.test.jpa;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -12,8 +12,8 @@ import com.processmonitor.utils.IFasadaWrapperDAO;
 
 @ContextConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
-public class ExampleConfigurationTests {
-	
+public class ProcessMonitorJPATests {
+
 	@Autowired
 	private IFasadaWrapperDAO service;
 
@@ -21,5 +21,5 @@ public class ExampleConfigurationTests {
 	public void testSimpleProperties() throws Exception {
 		assertNotNull(service);
 	}
-	
+
 }
