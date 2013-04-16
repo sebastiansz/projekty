@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>procesmonitor-dao</name>
+	<name>processmonitor-dao</name>
 	<comment>This project is a simple template for a jar utility using Spring.
   </comment>
 	<projects>
