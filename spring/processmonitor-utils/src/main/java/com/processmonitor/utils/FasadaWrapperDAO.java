@@ -1,4 +1,4 @@
-package org.test.spring;
+package com.processmonitor.utils;
 
 import org.springframework.stereotype.Component;
 

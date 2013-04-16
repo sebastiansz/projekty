@@ -1,4 +1,4 @@
-package org.temp.monitoring.web.controller;
+package com.processmonitor.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
