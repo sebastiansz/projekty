@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class ExampleConfigurationTests {
 	
 	@Autowired
-	private IFasadaDAO service;
+	private IFasadaWrapperDAO service;
 
 	@Test
 	public void testSimpleProperties() throws Exception {

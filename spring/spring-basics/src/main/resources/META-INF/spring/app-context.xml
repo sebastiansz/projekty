@@ -9,6 +9,10 @@
 	<!-- <context:component-scan base-package="org.test.spring" /> -->
 	<context:component-scan base-package="test" />
 
+
+    <import resource="classpath*:META-INF/spring/app-context.xml"/>
+
+
 	<bean id="executor1" class="org.test.spring.ExecutorDAO" scope="singleton" />
 <!-- 
 	<bean id="executor2" class="ExternalExecutorDAO" scope="singleton" />
