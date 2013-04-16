@@ -1,4 +1,4 @@
-package org.test.spring.dao;
+package com.processmonitor.dao;
 
 public interface IExecutorDAO {
 

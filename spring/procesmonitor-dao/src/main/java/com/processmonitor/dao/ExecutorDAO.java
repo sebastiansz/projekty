@@ -1,4 +1,4 @@
-package org.test.spring.dao;
+package com.processmonitor.dao;
 
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package org.test.spring.dao;
+package com.processmonitor.dao;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
