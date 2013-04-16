@@ -7,7 +7,7 @@
 	<artifactId>processmonitor-pom</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>spring-persistence-web</name>
+	<name>${project.artifactId}</name>
 
 	<properties>
 		<spring.version>3.0.2.RELEASE</spring.version>
@@ -18,6 +18,22 @@
 	<dependencyManagement>
 
 		<dependencies>
+
+			<dependency>
+				<groupId>com.processmonitor</groupId>
+				<artifactId>processmonitor-dao</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.processmonitor</groupId>
+				<artifactId>processmonitor-jws</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.processmonitor</groupId>
+				<artifactId>processmonitor-utils</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
 
 			<!-- General dependencies -->
 			<dependency>
@@ -344,8 +360,12 @@
 
 	</dependencyManagement>
 
-	<!-- <modules> <module>spring-dao</module> <module>spring-jws</module> <module>spring-persistence-web</module> 
-		</modules> -->
+	<modules>
+		<module>processmonitor-utils</module>
+		<module>processmonitor-dao</module>
+		<module>processmonitor-jws</module>
+		<module>processmonitor-web</module>
+	</modules>
 
 	<build>
 

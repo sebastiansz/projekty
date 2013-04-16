@@ -1,4 +1,4 @@
-package org.test.spring.jws;
+package com.processmonitor.jws;
 
 import org.springframework.stereotype.Component;
 

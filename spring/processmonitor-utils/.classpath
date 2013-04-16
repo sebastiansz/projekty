@@ -6,7 +6,5 @@
 	<classpathentry kind="src" path="src/test/resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER"/>
-	<classpathentry kind="lib" path="/spring-dao/target/spring-dao-1.0.0.CI-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="/spring-jws/target/spring-jws-1.0.0.CI-SNAPSHOT.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
