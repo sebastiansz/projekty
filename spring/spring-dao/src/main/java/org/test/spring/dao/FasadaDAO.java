@@ -1,4 +1,4 @@
-package org.test.spring;
+package org.test.spring.dao;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
