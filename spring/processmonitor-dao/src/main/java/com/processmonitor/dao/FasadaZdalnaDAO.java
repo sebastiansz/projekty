@@ -3,6 +3,7 @@ package com.processmonitor.dao;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Qualifier("fasadaZdalna")
 public class FasadaZdalnaDAO implements IFasadaDAO {
 
-	@Autowired
+	@PersistenceContext
 	EntityManager em;
 	
 	@Autowired

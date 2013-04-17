@@ -38,8 +38,8 @@ import javax.persistence.Table;
 @SequenceGenerator(name = "PA_SEQ", sequenceName = "PA_SEQ", allocationSize = 1)
 @Table(name = "KROKI_PROCESOW")
 @NamedQueries(value = {
-        @NamedQuery(name = "KrokProcesuEntity.szukajPoNazwie", query = "from KrokProcesuEntity ob where ob.procesIntegracyjny.id = :p_idProcesu and ob.nazwa = :p_nazwa"),
-        @NamedQuery(name = "KrokProcesuEntity.pobierzStanPoNazwie", query = "select ob.stan from KrokProcesuEntity ob where ob.procesIntegracyjny.id = :p_idProcesu and ob.nazwa = :p_nazwa") })
+		@NamedQuery(name = "ProcessActivityEntity.szukajPoNazwie", query = "from ProcessActivityEntity ob where ob.procesIntegracyjny.id = :p_idProcesu and ob.nazwa = :p_nazwa"),
+		@NamedQuery(name = "ProcessActivityEntity.pobierzStanPoNazwie", query = "select ob.stan from ProcessActivityEntity ob where ob.procesIntegracyjny.id = :p_idProcesu and ob.nazwa = :p_nazwa") })
 public class ProcessActivityEntity extends AbstractEntity {
 
 	private static final long serialVersionUID = 1L;
@@ -130,8 +130,7 @@ public class ProcessActivityEntity extends AbstractEntity {
 	 * Ustawia nową wartość dla atrybutu <code>procesIntegracyjny</code>.
 	 * 
 	 * @param aProcesIntegracyjny
-	 *            Parametr aktualizuje wartość atrybutu
-	 *            <code>procesIntegracyjny</code>.
+	 *            Parametr aktualizuje wartość atrybutu <code>procesIntegracyjny</code>.
 	 */
 	public void setProcesIntegracyjny(ProcessEntity aProcesIntegracyjny) {
 		procesIntegracyjny = aProcesIntegracyjny;
@@ -150,8 +149,7 @@ public class ProcessActivityEntity extends AbstractEntity {
 	 * Ustawia nową wartość dla atrybutu <code>etapWykonaniaProcesu</code>.
 	 * 
 	 * @param aEtapWykonaniaProcesu
-	 *            Parametr aktualizuje wartość atrybutu
-	 *            <code>etapWykonaniaProcesu</code>.
+	 *            Parametr aktualizuje wartość atrybutu <code>etapWykonaniaProcesu</code>.
 	 */
 	public void setNazwa(String aEtapWykonaniaProcesu) {
 		nazwa = aEtapWykonaniaProcesu;
@@ -208,8 +206,7 @@ public class ProcessActivityEntity extends AbstractEntity {
 	 * Ustawia nową wartość dla atrybutu <code>maksLiczbaPowtorzen</code>.
 	 * 
 	 * @param aMaksLiczbaPowtorzen
-	 *            Parametr aktualizuje wartość atrybutu
-	 *            <code>maksLiczbaPowtorzen</code>.
+	 *            Parametr aktualizuje wartość atrybutu <code>maksLiczbaPowtorzen</code>.
 	 */
 	public void setMaksLiczbaPowtorzen(Integer aMaksLiczbaPowtorzen) {
 		maksLiczbaPowtorzen = aMaksLiczbaPowtorzen;
@@ -228,8 +225,7 @@ public class ProcessActivityEntity extends AbstractEntity {
 	 * Ustawia nową wartość dla atrybutu <code>liczbaWywolan</code>.
 	 * 
 	 * @param aLiczbaWywolan
-	 *            Parametr aktualizuje wartość atrybutu
-	 *            <code>liczbaWywolan</code>.
+	 *            Parametr aktualizuje wartość atrybutu <code>liczbaWywolan</code>.
 	 */
 	public void setLiczbaWywolan(Integer aLiczbaWywolan) {
 		liczbaWywolan = aLiczbaWywolan;
@@ -248,8 +244,7 @@ public class ProcessActivityEntity extends AbstractEntity {
 	 * Ustawia nową wartość dla atrybutu <code>opoznieniePonowienia</code>.
 	 * 
 	 * @param aOpoznieniePonowienia
-	 *            Parametr aktualizuje wartość atrybutu
-	 *            <code>opoznieniePonowienia</code>.
+	 *            Parametr aktualizuje wartość atrybutu <code>opoznieniePonowienia</code>.
 	 */
 	public void setOpoznieniePonowienia(Long aOpoznieniePonowienia) {
 		opoznieniePonowienia = aOpoznieniePonowienia;
@@ -298,8 +293,7 @@ public class ProcessActivityEntity extends AbstractEntity {
 	 * Ustawia nową wartość dla atrybutu <code>zmiennaRequest</code>.
 	 * 
 	 * @param aZmiennaRequest
-	 *            Parametr aktualizuje wartość atrybutu
-	 *            <code>zmiennaRequest</code>.
+	 *            Parametr aktualizuje wartość atrybutu <code>zmiennaRequest</code>.
 	 */
 	public void setZmiennaRequest(ProcessVariableEntity aZmiennaRequest) {
 		zmiennaRequest = aZmiennaRequest;
@@ -318,8 +312,7 @@ public class ProcessActivityEntity extends AbstractEntity {
 	 * Ustawia nową wartość dla atrybutu <code>zmiennaResponse</code>.
 	 * 
 	 * @param aZmiennaResponse
-	 *            Parametr aktualizuje wartość atrybutu
-	 *            <code>zmiennaResponse</code>.
+	 *            Parametr aktualizuje wartość atrybutu <code>zmiennaResponse</code>.
 	 */
 	public void setZmiennaResponse(ProcessVariableEntity aZmiennaResponse) {
 		zmiennaResponse = aZmiennaResponse;
@@ -338,8 +331,7 @@ public class ProcessActivityEntity extends AbstractEntity {
 	 * Ustawia nową wartość dla atrybutu <code>dataModyfikacji</code>.
 	 * 
 	 * @param aDataModyfikacji
-	 *            Parametr aktualizuje wartość atrybutu
-	 *            <code>dataModyfikacji</code>.
+	 *            Parametr aktualizuje wartość atrybutu <code>dataModyfikacji</code>.
 	 */
 	public void setDataModyfikacji(Date aDataModyfikacji) {
 		dataModyfikacji = aDataModyfikacji;

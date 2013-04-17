@@ -36,9 +36,9 @@ import javax.persistence.Transient;
 @SequenceGenerator(name = "PA_SEQ", sequenceName = "PA_SEQ", allocationSize = 1)
 @Table(name = "PROCESY_INTEGRACYJNE")
 @NamedQueries(value = {
-        @NamedQuery(name = "ProcesIntegracyjnyEntity.szukajPoNazwie", query = "from ProcesIntegracyjnyEntity ob where ob.nazwaInstancji = :p_nazwaInstancji"),
-        @NamedQuery(name = "ProcesIntegracyjnyEntity.szukajPoStanie", query = "from ProcesIntegracyjnyEntity ob where ob.stan = :p_stan"),
-        @NamedQuery(name = "ProcesIntegracyjnyEntity.pobierzLogin", query = "select ob.login from ProcesIntegracyjnyEntity ob where ob.id = :p_idProcesu") })
+		@NamedQuery(name = "ProcessEntity.szukajPoNazwie", query = "from ProcessEntity ob where ob.nazwaInstancji = :p_nazwaInstancji"),
+		@NamedQuery(name = "ProcessEntity.szukajPoStanie", query = "from ProcessEntity ob where ob.stan = :p_stan"),
+		@NamedQuery(name = "ProcessEntity.pobierzLogin", query = "select ob.login from ProcessEntity ob where ob.id = :p_idProcesu") })
 public class ProcessEntity extends AbstractEntity {
 
 	private static final long serialVersionUID = 1L;
@@ -173,8 +173,7 @@ public class ProcessEntity extends AbstractEntity {
 	 * Ustawia nową wartość dla atrybutu <code>nazwaInstancji</code>.
 	 * 
 	 * @param aNazwaInstancji
-	 *            Parametr aktualizuje wartość atrybutu
-	 *            <code>nazwaInstancji</code>.
+	 *            Parametr aktualizuje wartość atrybutu <code>nazwaInstancji</code>.
 	 */
 	public void setNazwaInstancji(String aNazwaInstancji) {
 		nazwaInstancji = aNazwaInstancji;
@@ -224,8 +223,7 @@ public class ProcessEntity extends AbstractEntity {
 	 * Ustawia nową wartość dla atrybutu <code>zmienneProcesu</code>.
 	 * 
 	 * @param aZmienneProcesu
-	 *            Parametr aktualizuje wartość atrybutu
-	 *            <code>zmienneProcesu</code>.
+	 *            Parametr aktualizuje wartość atrybutu <code>zmienneProcesu</code>.
 	 */
 	public void setZmienneProcesu(List<ProcessVariableEntity> aZmienneProcesu) {
 		zmienneProcesu = aZmienneProcesu;
@@ -244,8 +242,7 @@ public class ProcessEntity extends AbstractEntity {
 	 * Ustawia nową wartość dla atrybutu <code>krokProcesu</code>.
 	 * 
 	 * @param aKrokProcesu
-	 *            Parametr aktualizuje wartość atrybutu <code>krokProcesu</code>
-	 *            .
+	 *            Parametr aktualizuje wartość atrybutu <code>krokProcesu</code> .
 	 */
 	protected void setKrokProcesu(List<ProcessActivityEntity> aKrokProcesu) {
 		krokProcesu = aKrokProcesu;

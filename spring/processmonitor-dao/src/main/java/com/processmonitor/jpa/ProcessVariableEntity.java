@@ -32,8 +32,8 @@ import javax.persistence.Transient;
 @SequenceGenerator(name = "PA_SEQ", sequenceName = "PA_SEQ", allocationSize = 1)
 @Table(name = "ZMIENNE_PROCESOW")
 @NamedQueries(value = {
-        @NamedQuery(name = "ZmiennaProcesuEntity.szukajPoNazwie", query = "from ZmiennaProcesuEntity ob where ob.procesIntegracyjny.id=:p_idProcesu and ob.nazwa = :p_nazwa"),
-        @NamedQuery(name = "ZmiennaProcesuEntity.szukajPoIdProcesu", query = "from ZmiennaProcesuEntity ob where ob.procesIntegracyjny.id=:p_idProcesu") })
+        @NamedQuery(name = "ProcessVariableEntity.szukajPoNazwie", query = "from ProcessVariableEntity ob where ob.procesIntegracyjny.id=:p_idProcesu and ob.nazwa = :p_nazwa"),
+        @NamedQuery(name = "ProcessVariableEntity.szukajPoIdProcesu", query = "from ProcessVariableEntity ob where ob.procesIntegracyjny.id=:p_idProcesu") })
 public class ProcessVariableEntity extends AbstractEntity {
 
 	private static final long serialVersionUID = 1L;

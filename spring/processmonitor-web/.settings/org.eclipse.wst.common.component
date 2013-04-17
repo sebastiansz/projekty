@@ -8,6 +8,9 @@
         <dependent-module archiveName="processmonitor-dao-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/processmonitor-dao/processmonitor-dao">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="processmonitor-utils-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/processmonitor-tests/processmonitor-tests">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/processmonitor-web/target/classes"/>
         <property name="context-root" value="processmonitor-web"/>
     </wb-module>
