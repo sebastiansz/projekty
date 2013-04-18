@@ -9,28 +9,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import com.processmonitor.jpa.ProcessEntity;
+
 @Component
 @Qualifier("fasadaZdalna")
 public class FasadaZdalnaDAO implements IFasadaDAO {
 
-	@PersistenceContext
+	@PersistenceContext(name = "processMonitorPersistenceUnit2")
 	EntityManager em;
-	
+
 	@Autowired
 	IExecutorDAO executor;
 
 	@Autowired
 	IExecutorDAO executor2;
-	
+
 	public FasadaZdalnaDAO() {
 		System.out.println(getClass().getSimpleName() + " CTOR()");
-		//Thread.dumpStack();
+		// Thread.dumpStack();
 	}
 
 	@PostConstruct
 	private void init() {
-		System.out.println(getClass().getSimpleName() + ".init() executor:"
-				+ executor + ", " + executor2);
+		System.out.println(getClass().getSimpleName() + ".init() executor:" + executor + ", " + executor2 + ", em:"
+				+ em);
+		ProcessEntity pProcess = em.find(ProcessEntity.class, 2720838L);
+		System.err.println("GEFUNDEN ENTITY: " + pProcess);
 	}
 
 	@PreDestroy

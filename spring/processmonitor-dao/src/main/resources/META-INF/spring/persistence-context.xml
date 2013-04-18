@@ -14,7 +14,8 @@
 
 
 	<!-- JPA Entity Manager Factory -->
-	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" p:dataSource-ref="processMonitorDS" />
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" p:dataSource-ref="processMonitorDS"
+		p:persistenceUnitName="processMonitorUnit_ORACLE" />
 
 	<bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
 

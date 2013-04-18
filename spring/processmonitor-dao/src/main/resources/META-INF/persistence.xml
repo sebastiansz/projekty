@@ -6,8 +6,21 @@
 		<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" /> <property name="hibernate.show_sql" value="false" /> <property name="hibernate.hbm2ddl.auto" 
 		value="update"/> </properties> </persistence-unit> -->
 
+	<persistence-unit name="processMonitorUnit_ORACLE" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.cache.use_second_level_cache" value="false" />
+			<property name="hibernate.cache.provider_class" value="net.sf.ehcache.hibernate.SingletonEhCacheProvider" />
+			<property name="hibernate.search.default.directory_provider" value="org.hibernate.search.store.FSDirectoryProvider" />
+			<property name="hibernate.search.default.indexBase" value="./lucene/indexes" />
+			<property name="hibernate.search.default.batch.merge_factor" value="10" />
+			<property name="hibernate.search.default.batch.max_buffered_docs" value="10" />
+		</properties>
+	</persistence-unit>
 
-	<persistence-unit name="processMonitorPersistenceUnit" transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="processMonitorUnit_H2" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
