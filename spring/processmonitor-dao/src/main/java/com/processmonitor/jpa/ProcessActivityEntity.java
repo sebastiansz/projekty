@@ -40,7 +40,7 @@ import javax.persistence.Table;
 @NamedQueries(value = {
 		@NamedQuery(name = "ProcessActivityEntity.szukajPoNazwie", query = "from ProcessActivityEntity ob where ob.procesIntegracyjny.id = :p_idProcesu and ob.nazwa = :p_nazwa"),
 		@NamedQuery(name = "ProcessActivityEntity.pobierzStanPoNazwie", query = "select ob.stan from ProcessActivityEntity ob where ob.procesIntegracyjny.id = :p_idProcesu and ob.nazwa = :p_nazwa") })
-public class ProcessActivityEntity extends AbstractEntity {
+public class ProcessActivityEntity extends AbstractJPA {
 
 	private static final long serialVersionUID = 1L;
 

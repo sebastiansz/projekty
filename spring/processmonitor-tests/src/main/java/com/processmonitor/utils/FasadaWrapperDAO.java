@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-import com.processmonitor.dao.IFasadaDAO;
+import com.processmonitor.dao.eee.IFasadaDAO;
 
 @Component
 public class FasadaWrapperDAO implements IFasadaWrapperDAO {

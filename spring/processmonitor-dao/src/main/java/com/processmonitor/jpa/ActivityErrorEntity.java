@@ -29,7 +29,7 @@ import javax.persistence.Transient;
 @Entity
 @SequenceGenerator(name = "PA_SEQ", sequenceName = "PA_SEQ", allocationSize = 1)
 @Table(name = "BLEDY_KROKOW")
-public class ActivityErrorEntity extends AbstractEntity {
+public class ActivityErrorEntity extends AbstractJPA {
 
 	private static final long serialVersionUID = 1L;
 

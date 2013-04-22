@@ -12,6 +12,8 @@ public class DashboardController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String show(ModelMap modelMap) {
 		
+		
+		
 		System.err.println(">>>>>>>>>>>>>" + getClass().getSimpleName() + ".show()");
 		
 		return "dashboard";

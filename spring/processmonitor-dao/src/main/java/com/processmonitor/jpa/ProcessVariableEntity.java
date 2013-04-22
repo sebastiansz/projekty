@@ -34,7 +34,7 @@ import javax.persistence.Transient;
 @NamedQueries(value = {
         @NamedQuery(name = "ProcessVariableEntity.szukajPoNazwie", query = "from ProcessVariableEntity ob where ob.procesIntegracyjny.id=:p_idProcesu and ob.nazwa = :p_nazwa"),
         @NamedQuery(name = "ProcessVariableEntity.szukajPoIdProcesu", query = "from ProcessVariableEntity ob where ob.procesIntegracyjny.id=:p_idProcesu") })
-public class ProcessVariableEntity extends AbstractEntity {
+public class ProcessVariableEntity extends AbstractJPA {
 
 	private static final long serialVersionUID = 1L;
 
