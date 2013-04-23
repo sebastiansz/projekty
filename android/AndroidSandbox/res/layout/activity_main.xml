@@ -23,25 +23,6 @@
         android:layout_alignLeft="@+id/seekBar1"
         android:layout_below="@+id/seekBar1"
         android:layout_marginLeft="24dp" >
-
-        <RadioButton
-            android:id="@+id/radio0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="RadioButton" />
-
-        <RadioButton
-            android:id="@+id/radio1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="RadioButton" />
-
-        <RadioButton
-            android:id="@+id/radio2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="RadioButton" />
     </RadioGroup>
 
     <SeekBar
@@ -51,19 +32,10 @@
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/progressBar1"
         android:layout_marginTop="25dp"
-        android:layout_toLeftOf="@+id/textView2" />
-
-    <Button
-        android:id="@+id/button1"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/radioGroup1"
-        android:text="Button" />
+        android:layout_toLeftOf="@+id/textProgressValue" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textProgressValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/radioGroup1"
@@ -80,5 +52,33 @@
         android:layout_below="@+id/textView1"
         android:minHeight="30dp"
         android:minWidth="30dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/seekBar1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/seekBar1"
+        android:gravity="bottom|fill" >
+
+        <Button
+            android:id="@+id/buttonSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search" />
+
+        <Button
+            android:id="@+id/buttonSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings" />
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel" />
+    </LinearLayout>
 
 </RelativeLayout>
