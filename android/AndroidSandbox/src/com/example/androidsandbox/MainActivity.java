@@ -1,7 +1,9 @@
 package com.example.androidsandbox;
 
 import android.app.Activity;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +15,8 @@ public class MainActivity extends Activity implements
 		android.view.View.OnClickListener {
 
 	private TextView textProgressView;
+
+	private Handler handler = new Handler();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +34,6 @@ public class MainActivity extends Activity implements
 		Button btnSettings = (Button) findViewById(R.id.buttonSettings);
 		btnSettings.setOnClickListener(this);
 
-		
-		
 		Button btnCancel = (Button) findViewById(R.id.buttonCancel);
 		btnCancel.setOnClickListener(this);
 
@@ -49,7 +51,7 @@ public class MainActivity extends Activity implements
 			public void onProgressChanged(SeekBar seekBar, int progress,
 					boolean fromUser) {
 
-				textProgressView.setText("ll"+progress);
+				textProgressView.setText("ll" + progress);
 			}
 		});
 
@@ -71,6 +73,50 @@ public class MainActivity extends Activity implements
 	@Override
 	public void onClick(View v) {
 		System.err.println("OnClick() " + v);
+
+		// Wersja z Handlerem
+		handler.post(new Runnable() {
+
+			@Override
+			public void run() {
+				System.err.println("HANDLER OK");
+
+			}
+		});
+
+		System.err.println("onClick() " + Thread.currentThread());
+
+		// Wersja z AsyncTask + przetwarzanie szeregowe
+		new MyAsyncTask().execute(12);
+
+		// Wersja z AsyncTask + przetwarzanie równoległe
+		new MyAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, 12);
+
+	}
+
+	class MyAsyncTask extends AsyncTask<Integer, Integer, Void> {
+
+		@Override
+		protected Void doInBackground(Integer... params) {
+			System.err.println("OK doInBackground() " + Thread.currentThread());
+
+			for (int i = 0; i < 10; i++) {
+				// zrob coś cząstkowego
+
+				// update progresu
+				publishProgress(i);
+			}
+
+			return null;
+		}
+
+		// wywoła się w wątku UI (!!!)
+		@Override
+		protected void onProgressUpdate(Integer... values) {
+			super.onProgressUpdate(values);
+			System.err.println("Progres: " + values[0]*10 + ", " + Thread.currentThread());
+		}
+
 	}
 
 }

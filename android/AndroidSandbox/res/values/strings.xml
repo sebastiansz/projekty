@@ -4,7 +4,12 @@
     <string name="app_name">AndroidSandbox</string>
     <string name="wersja_aplikacji">1.0.0.0.1</string>
     <string name="title_activity_main">Haupt</string>
+    <string name="title_todo_activity_main">ToDo</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="addItemHint">New todo Item</string>
+    <string name="addItemContentDescription">New todo Item</string>
+    <string name="title_fragment">das ist ein Fragment</string>
+    <string name="hint_fragment">Das ist Fragment von Hint</string>
 
 </resources>
